@@ -1,11 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // set up our express app
 const app = express();
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/ourdata');
+
+let db = process.env.MONGOURI;
+mongoose.connect(db);
 mongoose.Promise = global.Promise;
 
 app.use(express.json());
@@ -20,6 +23,6 @@ app.use(function(err,req,res,next){
 });
 
 // listen for requests
-app.listen(process.env.port || 4000, function(){
-    console.log('Ready to Go!');
+app.listen(process.env.port || 3000, function(){
+    console.log('Ready! Listening for requests...');
 });
