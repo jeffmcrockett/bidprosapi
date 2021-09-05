@@ -25,3 +25,24 @@ const UserSchema = new Schema({
 const User = mongoose.model('user',UserSchema);
 
 module.exports = User;
+
+
+
+
+
+
+
+// {
+//     "name": "Jayden's Home for Homeless People",
+//     "organization": "Jayden's Living Room",
+//     "email": "jaydensaves@gmail.com",
+//     "items": {
+//         "name": "One week stay in Jayden's Guest Room"
+//     },
+//     "users": {
+//         "firstName": "Jayden",
+//         "lastName": "Gliffenburg",
+//         "email": "jaydensaves@gmail.com",
+//         "password": "gliffenburg420"
+//     }
+// }

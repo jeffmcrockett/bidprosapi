@@ -5,11 +5,15 @@ const Schema = mongoose.Schema;
 const ItemSchema = new Schema({
     name: {
         type: String,
-        required: [true, 'First name is required']
+        required: [true, 'Item name is required']
     },
-    event: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Event"
+    description: {
+        type: String,
+        required: false
+    },
+    value: {
+        type: String,
+        required: false
     }
 });
 

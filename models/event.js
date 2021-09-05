@@ -17,8 +17,14 @@ const EventSchema = new Schema({
     },
     items: [
         {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Item"
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Item"
+        }
+    ],
+    users: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
         }
     ]
 });
