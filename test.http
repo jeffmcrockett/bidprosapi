@@ -1,8 +1,8 @@
-POST http://localhost:3000/api/items/61318021b166092751cbd779 HTTP/1.1
+POST bidprosapi.herokuapp.com/api/items/61318021b166092751cbd779
 Content-Type: application/json
 
 {
-    "name": "One Week Stay at Jayden's House",
-    "description": "Teach Jayden how to cook!",
-    "value": "Priceless"
+    "name": "Apple iPhone 12",
+    "description": "A brand new iPhone",
+    "value": "$800"
 }

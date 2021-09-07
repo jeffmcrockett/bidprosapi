@@ -29,8 +29,9 @@ app.use(function(err,req,res,next){
 });
 
 // listen for requests
-app.listen(process.env.port || 3000, function(){
-    console.log('Ready! Listening for requests...');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.warn(`App listening on http://localhost:${PORT}`);
 });
 
 // hosted at https://jeffmcrockett.github.io/bidprosapi/
