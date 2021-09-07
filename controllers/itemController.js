@@ -1,4 +1,5 @@
 const Item = require('../models/item');
+const Event = require('../models/event');
 
 let itemController = {
     findByEvent: async (req,res,next) => {
@@ -14,6 +15,15 @@ let itemController = {
     create: (req,res,next) => {
         Item.create(req.body).then(function(item){
             res.send(item);
+        }).catch(next);
+    },
+    createOnEvent: (req,res,next) => {
+        Item.create(req.body).then(function(item){
+            Event.findOneAndUpdate({_id: req.params.eventId},{$push: {'items': item._id}}).then(function(event){
+                Event.findOne({_id: req.params.eventId}).then(function(event){
+                    res.send(event);
+                }).catch(next);
+            }).catch(next);
         }).catch(next);
     },
     update: (req,res,next) => {

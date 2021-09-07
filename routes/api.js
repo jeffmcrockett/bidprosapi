@@ -25,6 +25,7 @@ router.get('/items', itemController.all);
 router.get('/items/:eventId', itemController.findByEvent);
 router.put('/items/:id', itemController.update);
 router.post('/items', itemController.create);
+router.post('/items/:eventId', itemController.createOnEvent);
 router.delete('/items/:id', itemController.delete);
 
 module.exports = router;
