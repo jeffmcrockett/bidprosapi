@@ -13,7 +13,7 @@ const EventSchema = new Schema({
     },
     email: {
         type: String,
-        required: [true, 'Last name is required']
+        required: [true, 'Email is required']
     },
     items: [
         {

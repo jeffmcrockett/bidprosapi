@@ -1,8 +1,8 @@
-POST bidprosapi.herokuapp.com/api/items/61318021b166092751cbd779
+POST https://bidprosapi.herokuapp.com/api/events HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Apple iPhone 12",
-    "description": "A brand new iPhone",
-    "value": "$800"
+    "name": "A Night to Remember",
+    "organization": "Dell Children's Medical",
+    "email": "dell@fakegmail.com"
 }
