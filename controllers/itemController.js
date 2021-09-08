@@ -20,7 +20,7 @@ let itemController = {
     createOnEvent: (req,res,next) => {
         Item.create(req.body).then(function(item){
             Event.findOneAndUpdate({_id: req.params.eventId},{$push: {'items': item._id}}).then(function(event){
-                Event.findOne({_id: req.params.eventId}).then(function(event){
+                Event.findOne({_id: req.params.eventId}).populate('items').then(function(event){
                     res.send(event);
                 }).catch(next);
             }).catch(next);

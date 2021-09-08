@@ -1,8 +1,8 @@
-POST https://bidprosapi.herokuapp.com/api/events HTTP/1.1
+POST http://localhost:3000/api/items/61318021b166092751cbd779 HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "A Night to Remember",
-    "organization": "Dell Children's Medical",
-    "email": "dell@fakegmail.com"
+    "name": "New Audi Q5",
+    "description": "Sweet Set of Wheels",
+    "value": "$40,000"
 }

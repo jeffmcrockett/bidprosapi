@@ -18,13 +18,13 @@ const EventSchema = new Schema({
     items: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Item"
+            ref: "item"
         }
     ],
     users: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
+            ref: "user"
         }
     ]
 });
