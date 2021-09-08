@@ -11,6 +11,11 @@ let userController = {
             res.send(users);
         }).catch(next);
     },
+    login: async (req, res, next) => {
+        User.find({email: req.params.email, password: req.params.password}).then(function(users){
+            res.send(users);
+        }).catch(next);
+    },
     create: (req,res,next) => {
         User.create(req.body).then(function(user){
             res.send(user);

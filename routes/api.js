@@ -12,6 +12,7 @@ const itemController = require('../controllers/itemController.js');
 // routes for user get, put, post, delete
 router.get('/users', userController.all);
 router.get('/users/:first/:last', userController.find);
+router.get('/users/login/:email/:password', userController.login);
 router.put('/users/:id', userController.update);
 router.post('/users', userController.create);
 router.delete('/users/:id', userController.delete);
