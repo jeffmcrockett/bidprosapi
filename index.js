@@ -13,11 +13,11 @@ app.use(function(req, res, next) {
 
 const cors = require('cors');
 app.use(cors ({
-    origin: "Https://bidprosapp.herokuapp.com"
-}));
-app.use(cors ({
     origin: "http://localhost:3001"
 }));
+// app.use(cors ({
+//     origin: "Https://bidprosapp.herokuapp.com"
+// }));
 
 // connect to mongodb
 
