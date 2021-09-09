@@ -26,7 +26,8 @@ router.delete('/events/:id', eventController.delete);
 
 // routes for items get, post, put, delete
 router.get('/items', itemController.all);
-router.get('/items/:eventId', itemController.findByEvent);
+router.get('/items/:itemId', itemController.find);
+router.get('/items/event/:eventId', itemController.findByEvent);
 router.put('/items/:id', itemController.update);
 router.post('/items', itemController.create);
 router.post('/items/:eventId', itemController.createOnEvent);

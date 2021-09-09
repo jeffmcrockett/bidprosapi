@@ -12,6 +12,11 @@ let itemController = {
             res.send(items);
         }).catch(next);
     },
+    find: async (req,res,next) => {
+        Item.find({ _id: req.params.itemId }).then(function(item){
+            res.send(item);
+        }).catch(next);
+    },
     create: (req,res,next) => {
         Item.create(req.body).then(function(item){
             res.send(item);
