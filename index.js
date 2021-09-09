@@ -11,6 +11,14 @@ app.use(function(req, res, next) {
     next();
     });
 
+const cors = require('cors');
+app.use(cors ({
+    origin: "Https://bidprosapp.herokuapp.com"
+}));
+app.use(cors ({
+    origin: "http://localhost:3001"
+}));
+
 // connect to mongodb
 
 let db = process.env.MONGOURI;
