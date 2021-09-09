@@ -2,9 +2,9 @@ const Item = require('../models/item');
 const Event = require('../models/event');
 
 let itemController = {
-    findByEvent: async (req,res,next) => {
-        Item.find({'event': req.params.eventId}).then(function(items){
-            res.send(items);
+    findByEvent: async (req, res, next) => {
+        Event.findOne({ _id: req.params.eventId }).populate('items').then(function (event) {
+            res.send(event.items);
         }).catch(next);
     },
     all: async (req,res,next) => {

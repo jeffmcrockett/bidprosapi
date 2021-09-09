@@ -1,8 +1,2 @@
-POST http://localhost:3000/api/items/61318021b166092751cbd779 HTTP/1.1
+GET http://localhost:3000/api/users/login/jeffmcrockett@gmail.com/password HTTP/1.1
 Content-Type: application/json
-
-{
-    "name": "New Audi Q5",
-    "description": "Sweet Set of Wheels",
-    "value": "$40,000"
-}
