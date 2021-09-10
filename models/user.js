@@ -19,6 +19,11 @@ const UserSchema = new Schema({
         type: String,
         required: [true, 'Password is required']
     },
+    writeConcern: {
+        w: 'majority',
+        j: true,
+        wtimeout: 1000
+    }
 });
 
 

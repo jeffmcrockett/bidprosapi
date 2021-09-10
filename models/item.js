@@ -14,6 +14,11 @@ const ItemSchema = new Schema({
     value: {
         type: String,
         required: false
+    }, 
+    writeConcern: {
+        w: 'majority',
+        j: true,
+        wtimeout: 1000
     }
 });
 
