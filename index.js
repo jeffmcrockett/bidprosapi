@@ -8,7 +8,7 @@ const app = express();
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
-    // next();
+    next();
     });
 
 // const cors = require('cors');
@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 // connect to mongodb
 
 // let db = process.env.MONGOURI;
-mongoose.connect("mongodb+srv://jeff:Solene@bidprosdata.mqlza.mongodb.net/myFirstDatabase?retryWrites=true");
+mongoose.connect("mongodb+srv://jeff:Solene@bidprosdata.mqlza.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 mongoose.Promise = global.Promise;
 
 app.use(express.json());
