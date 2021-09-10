@@ -18,12 +18,12 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: [true, 'Password is required']
-    },
-    writeConcern: {
-        w: 'majority',
-        j: true,
-        wtimeout: 1000
     }
+    // writeConcern: {
+    //     w: 'majority',
+    //     j: true,
+    //     wtimeout: 1000
+    // }
 });
 
 

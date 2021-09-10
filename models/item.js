@@ -14,12 +14,12 @@ const ItemSchema = new Schema({
     value: {
         type: String,
         required: false
-    }, 
-    writeConcern: {
-        w: 'majority',
-        j: true,
-        wtimeout: 1000
-    }
+    } 
+    // writeConcern: {
+    //     w: 'majority',
+    //     j: true,
+    //     wtimeout: 1000
+    // }
 });
 
 const Item = mongoose.model('item',ItemSchema);

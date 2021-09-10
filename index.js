@@ -24,8 +24,8 @@ app.use(function(req, res, next) {
 
 // connect to mongodb
 
-let db = process.env.MONGOURI;
-mongoose.connect(db);
+// let db = process.env.MONGOURI;
+mongoose.connect("mongodb+srv://jeff:Solene@bidprosdata.mqlza.mongodb.net/myFirstDatabase?retryWrites=true");
 mongoose.Promise = global.Promise;
 
 app.use(express.json());
